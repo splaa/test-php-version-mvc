@@ -14,7 +14,8 @@ $view = new View();
 
 $view->users = User::findAll();
 
-$view->display(__DIR__ . '/../templates/index.php');
+//$view->display(__DIR__ . '/../templates/index.php');
+echo $view->render(__DIR__ . '/../templates/index.php');
 
 
 

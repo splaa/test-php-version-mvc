@@ -12,14 +12,6 @@ class View
 {
     protected $data = [];
 
-    /**
-     * @param $template
-     *
-     */
-    public function display($template)
-    {
-        include $template;
-    }
 
     public function __get($name)
     {
@@ -36,5 +28,26 @@ class View
      return isset($this->data[$name]);
     }
 
+    /**
+     * @param $template
+     * @deprecated
+     *
+     */
+    public function display($template)
+    {
+        echo $this->render($template);
+    }
+
+    public function render($template)
+    {
+        ob_start();
+
+        include $template;
+
+        $contents = ob_get_contents();
+        ob_end_clean();
+
+        return $contents;
+    }
 
 }
