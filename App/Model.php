@@ -14,8 +14,8 @@ abstract class Model
     public static function findAll()
     {
         $db = new Db();
-        $query = 'select * from '. static::TABLE;
-        return $db->query($query ,
+        $query = 'select * from ' . static::TABLE;
+        return $db->query($query,
             [],
             static::class);
     }
@@ -26,11 +26,36 @@ abstract class Model
     public static function findById($id)
     {
         $db = new Db();
-        $query = 'select * from '. static::TABLE . ' where id=' . $id;
-        $res = $db->query($query ,
+        $query = 'SELECT * FROM ' . static::TABLE . ' WHERE id=' . $id;
+        $res = $db->query($query,
             [],
             static::class);
         return $res ? $res : false;
     }
+
+    public function insert()
+    {
+        $fields = get_object_vars($this);
+
+        $cols = [];
+        $data = [];
+
+        foreach ($fields as $name => $value) {
+            if ('id' == $name) {
+                continue;
+            }
+            $cols[] = $name;
+            $data[':' . $name] = $value;
+        }
+
+       $sql = 'INSERT INTO ' . static::TABLE . '
+        ('. implode(',', $cols).') 
+        VALUES 
+        ('.implode(',',array_keys($data)).') ';
+
+        $db = new Db();
+        $db->execute($sql, $data);
+        $this->id = $db->getLastId();
+           }
 
 }
