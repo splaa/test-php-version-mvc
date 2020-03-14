@@ -17,4 +17,13 @@ class User extends Model
     public $territory_json;
 
 
+    /**
+     * @return mixed
+     */
+    public function getTerritoryJson()
+    {
+        return $this->territory_json;
+    }
+
+
 }
