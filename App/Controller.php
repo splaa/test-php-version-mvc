@@ -34,4 +34,5 @@ abstract class Controller
     }
 
     abstract protected function handle();
+
 }

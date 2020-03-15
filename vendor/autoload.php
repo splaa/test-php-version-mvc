@@ -1,12 +1,5 @@
 <?php
 
-
-function __autoload($class)
-{
-
-
-//    echo __DIR__ . '/../' .  str_replace('\\', '/', $class . '.php');
-//    die();
+spl_autoload_register(function ($class) {
     require __DIR__ . '/../' .  str_replace('\\', '/', $class . '.php');
-}
-
+});

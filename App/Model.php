@@ -23,6 +23,7 @@ abstract class Model
     /**
      * @param $id
      * @return mixed
+     * @throws Exceptions\DbException
      */
     public static function findById($id)
     {
