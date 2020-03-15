@@ -11,12 +11,9 @@ class User extends Controller
 {
     public function action()
     {
-        $this->view->users = ModUser::findAll();
-
-        $view['header'] = 'header';
-        $view['footer'] = 'footer';
+        $this->view->user = ModUser::findById($_GET['id']);
 
 
-        echo $this->view->render(__DIR__ . '/../../../templates/index.php');
-}
+        echo $this->view->render(__DIR__ . '/../../templates/user.php');
+    }
 }

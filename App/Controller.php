@@ -15,7 +15,12 @@ abstract class Controller
     public function __construct(View $view = null)
     {
         $this->view = $view ?? new View();
+
+        $this->view['header'] = 'header';
+        $this->view['footer'] = 'footer';
     }
+
+    abstract public function action();
 
 
 }
