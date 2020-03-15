@@ -21,16 +21,17 @@ abstract class Model
     }
 
     /**
+     * @param $id
      * @return mixed
      */
     public static function findById($id)
     {
         $db = new Db();
-        $query = 'SELECT * FROM ' . static::TABLE . ' WHERE id=' . $id;
+        $query = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $res = $db->query($query,
-            [],
+            [':id' =>$id],
             static::class);
-        return $res ? $res : false;
+        return $res ? $res[0] : null;
     }
 
     public function insert()

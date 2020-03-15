@@ -4,6 +4,7 @@
 
 use App\View;
 
+
 ?>
 <!doctype html>
 <html lang="ru">
@@ -25,7 +26,9 @@ use App\View;
 </header>
 
 <div class="container">
-    <h2>База зарегистрированных людей</h2>
+    <h2><a href="user.php?id=<?php echo $this->user->id  ?>">
+            <?php echo $this->user->name ?>
+        </a></h2>
     <table class="table table-striped">
         <thead class="table-primary">
         <tr>
@@ -36,19 +39,18 @@ use App\View;
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($this->users as $user): ?>
+
             <tr>
-                <th scope="row"><?php echo $user->id ?></th>
+                <th scope="row"><?php echo $this->user->id ?></th>
                 <td>
-                    <a href="user.php?id=<?php echo $user->id  ?>">
-                        <?php echo $user->name ?>
+                    <a href="user.php?id=<?php echo $this->user->id  ?>">
+                        <?php echo $this->user->name ?>
                     </a>
                 </td>
-                <td><?php echo $user->email ?></td>
-                <td><?php echo $user->territory_json ?></td>
+                <td><?php echo $this->user->email ?></td>
+                <td><?php echo $this->user->territory_json ?></td>
             </tr>
-        <?php endforeach; ?>
-        </tbody>
+              </tbody>
     </table>
 </div>
 

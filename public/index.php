@@ -14,7 +14,10 @@ $view = new View();
 
 $view->users = User::findAll();
 
-//$view->display(__DIR__ . '/../templates/index.php');
+$view['header'] = 'header';
+$view['footer'] = 'footer';
+
+
 echo $view->render(__DIR__ . '/../templates/index.php');
 
 

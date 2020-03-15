@@ -5,10 +5,12 @@ namespace App;
 /**
  * Class View
  * @package App
+ * @property $header
+ * @property $footer
  * @property $users
  */
 
-class View
+class View implements \Countable, \ArrayAccess
 {
     protected $data = [];
 
@@ -50,4 +52,43 @@ class View
         return $contents;
     }
 
+    /**
+     * @inheritDoc
+     */
+    public function count()
+    {
+        return count($this->data);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function offsetExists($offset)
+    {
+        return isset($this->data[$offset]);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function offsetGet($offset)
+    {
+        return $this->data[$offset] ?? null;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function offsetSet($offset, $value)
+    {
+        $this->data[$offset] = $value;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function offsetUnset($offset)
+    {
+        unset($this->data[$offset]);
+    }
 }
