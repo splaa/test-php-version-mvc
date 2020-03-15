@@ -16,15 +16,8 @@ abstract class Controller
     {
         $this->view = $view ?? new View();
 
-        $this->view['header'] = 'header';
-        $this->view['footer'] = 'footer';
-    }
 
-    protected function access(): bool
-    {
-        return 'Boss' == ($_GET['name'] ?? 'Boss');
     }
-
 
     public function __invoke()
     {
@@ -33,6 +26,11 @@ abstract class Controller
         } else {
             die('Нет доступа');
         }
+    }
+
+    protected function access(): bool
+    {
+        return 'Boss' == ($_GET['name'] ?? 'Boss');
     }
 
     abstract protected function handle();

@@ -4,6 +4,10 @@ require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/testFunction.php';
 
 
+$exc = new \App\Exception\DbException();
+
+dump($exc);
+
 $uri = $_SERVER['REQUEST_URI'];
 
 $parts = explode('/', $uri);

@@ -22,7 +22,23 @@ use App\View;
 </head>
 <body>
 <header>
-<?php echo $this->header?>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+
+            <a href="" class="navbar-brand">App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <div class="container">
@@ -54,9 +70,12 @@ use App\View;
     </table>
 </div>
 
-<footer>
-    <?php echo $this->footer?>
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">App</span>
+    </div>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

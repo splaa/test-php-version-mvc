@@ -9,3 +9,4 @@ out
 gen
 .gitignore
 /config/config-local.php
+/database/
