@@ -13,10 +13,10 @@ use App\View;
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/chosen.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/chosen.min.css"/>
     <!-- Custom style -->
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
     <title>Test PHP</title>
 </head>
 <body>
@@ -40,7 +40,7 @@ use App\View;
             <tr>
                 <th scope="row"><?php echo $user->id ?></th>
                 <td>
-                    <a href="?ctrl=User&id=<?php echo $user->id  ?>">
+                    <a href="/user/?id=<?php echo $user->id  ?>">
                         <?php echo $user->name ?>
                     </a>
                 </td>

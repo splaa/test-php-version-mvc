@@ -1,11 +1,10 @@
 version: '3.1'
 services:
   php-apache:
-    build:
-      context: ./docker
-      dockerfile: apache.docker
+    image: yiisoftware/yii2-php:7.1-apache
     volumes:
-      - ./:/app
+     - ~/.composer-docker/cache:/root/.composer/cache:delegated
+     - ./:/app:delegated
     ports:
       - "80:80"
     depends_on:
