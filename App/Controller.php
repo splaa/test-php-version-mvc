@@ -20,7 +20,5 @@ abstract class Controller
         $this->view['footer'] = 'footer';
     }
 
-    abstract public function action();
-
-
+    abstract public function __invoke();
 }

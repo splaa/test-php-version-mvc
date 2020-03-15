@@ -7,5 +7,5 @@ require __DIR__ . '/testFunction.php';
 
 
 $ctrl = new Index();
-$ctrl->action();
+$ctrl();
 
