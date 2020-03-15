@@ -9,7 +9,7 @@ use App\Models\User;
 
 class Index extends Controller
 {
-    public function __invoke()
+    public function handle()
     {
 
         $this->view->users = User::findAll();

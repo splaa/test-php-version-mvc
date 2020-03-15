@@ -20,5 +20,20 @@ abstract class Controller
         $this->view['footer'] = 'footer';
     }
 
-    abstract public function __invoke();
+    protected function access(): bool
+    {
+        return 'Boss' == ($_GET['name'] ?? 'Boss');
+    }
+
+
+    public function __invoke()
+    {
+        if ($this->access()) {
+            $this->handle();
+        } else {
+            die('Нет доступа');
+        }
+    }
+
+    abstract protected function handle();
 }

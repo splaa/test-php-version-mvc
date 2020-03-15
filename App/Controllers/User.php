@@ -9,7 +9,9 @@ use App\Models\User as ModUser;
 
 class User extends Controller
 {
-    public function __invoke()
+
+
+    public function handle()
     {
         $this->view->user = ModUser::findById($_GET['id']);
 
