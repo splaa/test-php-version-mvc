@@ -40,7 +40,7 @@ use App\View;
             <tr>
                 <th scope="row"><?php echo $user->id ?></th>
                 <td>
-                    <a href="user.php?id=<?php echo $user->id  ?>">
+                    <a href="?ctrl=User&id=<?php echo $user->id  ?>">
                         <?php echo $user->name ?>
                     </a>
                 </td>
