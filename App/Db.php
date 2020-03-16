@@ -10,7 +10,7 @@ use App\Exceptions\DbException;
 
 class Db
 {
-    protected $dbh;
+    public $dbh;
 
     public function __construct()
     {
@@ -29,16 +29,16 @@ class Db
     }
 
 
-    public function query($sql, $data = [], $class)
+    public function query($sql, $data = [], $class, $fetch_style = \PDO::FETCH_CLASS)
     {
         $sth = $this->dbh->prepare($sql);
         $sth->execute($data);
         if (false) {
-            throw new DbException($sql,'Запрос неможет быть выполнен',100);
+            throw new DbException($sql, 'Запрос неможет быть выполнен', 100);
         }
 
 
-       return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
+        return $sth->fetchAll($fetch_style, $class);
     }
     public function execute($query, $params = [])
     {

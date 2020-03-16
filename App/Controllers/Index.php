@@ -14,6 +14,7 @@ class Index extends Controller
 
         $this->view->users = User::findAll();
 
-        echo $this->view->render(__DIR__ . '/../../templates/index.php');
+
+        return $this->view->render(__DIR__ . '/../../templates/index.php');
     }
 }

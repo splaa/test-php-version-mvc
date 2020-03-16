@@ -6,7 +6,7 @@ namespace App\Controllers;
 
 use App\Controller;
 
-class Login extends Controller
+class Test extends Controller
 {
 
 
@@ -17,7 +17,7 @@ class Login extends Controller
             $this->rules($_POST['email'], $_POST['password']);
 
         }
-        echo $this->view->render(__DIR__ . '/../../templates/login.php');
+        echo $this->view->render(__DIR__ . '/../../templates/test.php');
     }
 
     private function rules($email, $password)

@@ -5,14 +5,13 @@ namespace App;
 /**
  * Class View
  * @package App
- * @property $header
- * @property $footer
- * @property $users
  */
 
 class View implements \Countable, \ArrayAccess
 {
     protected $data = [];
+
+    public $layout = __DIR__ . '/../templates/layout/main.php';
 
 
     public function __get($name)
@@ -40,16 +39,18 @@ class View implements \Countable, \ArrayAccess
         echo $this->render($template);
     }
 
-    public function render($template)
+    public function render($content)
     {
         ob_start();
+        include $content;
 
-        include $template;
+        include $this->layout;
+
 
         $contents = ob_get_contents();
         ob_end_clean();
 
-        return $contents;
+        echo $contents;
     }
 
     /**

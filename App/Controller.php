@@ -4,6 +4,8 @@
 namespace App;
 
 
+use App\Models\User;
+
 abstract class Controller
 {
     protected $view;
@@ -21,18 +23,31 @@ abstract class Controller
 
     public function __invoke()
     {
-        if ($this->access()) {
+        if (true) {
             $this->handle();
         } else {
-            die('Нет доступа');
+
+            $this->redirect('login');
+
         }
     }
 
-    protected function access(): bool
+    protected function access($mail = 'example@gmail.com'): bool
     {
-        return 'Boss' == ($_GET['name'] ?? 'Boss');
+        $user = new User();
+        return $user->isMailExists($mail) ?? true;
+        return true;
     }
 
     abstract protected function handle();
+
+    private function redirect($page = 'login'): void
+    {
+        $host = $_SERVER['HTTP_HOST'];
+        $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        $extra = $page;
+        header("Location: http://$host$uri/$extra");
+        exit;
+    }
 
 }

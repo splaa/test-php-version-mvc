@@ -6,18 +6,13 @@ namespace App\Controllers;
 
 use App\Controller;
 
-class Login extends Controller
+class Registration extends Controller
 {
-
 
     protected function handle()
     {
-        if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-            $this->rules($_POST['email'], $_POST['password']);
-
-        }
-        echo $this->view->render(__DIR__ . '/../../templates/login.php');
+        return $this->view->render(__DIR__ . '/../../templates/reg.php');
     }
 
     private function rules($email, $password)
