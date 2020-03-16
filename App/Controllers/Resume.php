@@ -6,24 +6,14 @@ namespace App\Controllers;
 
 use App\Controller;
 
-class Login extends Controller
+class Resume extends Controller
 {
 
 
     protected function handle()
     {
-        if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-            if ($this->rules($_POST['email'], $_POST['password'])) {
-
-                $user = new \App\Models\User();
-                return $user->isMailExists($_POST['email']) ? $user->getUserByEmail($_POST['email'])->name : 'Guest';
-
-            }
-
-
-        }
-        echo $this->view->render(__DIR__ . '/../../templates/login.php');
+        echo $this->view->render(__DIR__ . '/../../templates/resume.php');
     }
 
     private function rules($email, $password)

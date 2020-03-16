@@ -49,6 +49,9 @@ if ($post) {
                     <li class="nav-item active">
                         <a href="/registration/" class="nav-link">Registration</a>
                     </li>
+                    <li class="nav-item active">
+                        <a href="/resume/" class="nav-link">Resume</a>
+                    </li>
 
                 </ul>
             </div>
