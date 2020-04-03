@@ -126,21 +126,68 @@
     <h2>Portfolio</h2>
     <hr>
     <div class="container">
-        <div> Тестовое задание PHP</div>
+
         <div class="row text-center">
+
             <div class="col-sm-4 col-12 p-0">
-                <a href="http://35.198.71.142/registration/">
-                    <img class="img-thumbnail"
-                         src="/resum/images/portfolio-test-one.png"
-                         alt="Тестовое задание"
-                         height="300px"
+                <div>
+                    Тестовое задание: <br>
+                    <a href="https://artjoker.ua/">Artjoker</a>"PHP": <br>
+                    Data: 7 бер 2020 <br>
+                    link: <a href="http://35.198.71.142/"> GCloud</a><br>
+                    GitHub: <a href="https://github.com/splaa/test-php-version-mvc">ссылка</a> <br>
+                </div>
+                <div><a href="http://35.198.71.142/registration/">
+                        <img class="img-thumbnail"
+                             src="/resum/images/portfolio-test-one.png"
+                             alt="Тестовое задание"
+                             height="300px"
 
-                    >
-                </a>
+                        >
+                    </a>
 
-
-                GitHub - <a href="https://github.com/splaa/test-php-version-mvc">ссылка</a> <br>
+                </div>
             </div>
+            <div class="col-sm-4 col-12 p-0">
+                <div>
+                    Tестовое Задание: <br>
+                    <a href="https://beejee.ru/">BeeJee</a> "PHP": <br>
+                    Data: 20.03.2020: <br>
+                    link: <a href="http://35.198.71.142/"> GCloud</a><br>
+                    GitLab: <a href="https://gitlab.com/splaa/test-task">ссылка</a> <br>
+                </div>
+                <div><a href="http://35.206.99.76/">
+                        <img class="img-thumbnail"
+                             src="/resum/images/portfolio-test-bee-jee.png"
+                             alt="Тестовое задание"
+                             height="300px"
+
+                        >
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-sm-4 col-12 p-0">
+                <div>
+                    Описание задание "PHP HTML": <br>
+                    Data: 9.09.0009
+                    Domain: <a href="http://35.198.71.142/"> Ссылка на domain</a><br>
+                    GitHub: <a href="#">ссылка на репозиторий</a> <br>
+                </div>
+                <div><a href="#">
+                        <img class="img-thumbnail"
+                             src="/resum/images/300X200.gif"
+                             alt="Фото задания"
+                             height="300px"
+
+                        >
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail" src="/resum/images/300X200.gif" alt=""></div>
             <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail" src="/resum/images/300X200.gif" alt=""></div>
             <div class="col-sm-4 col-12 p-0"><img class="img-thumbnail" src="/resum/images/300X200.gif" alt=""></div>
         </div>
