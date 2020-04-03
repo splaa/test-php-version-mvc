@@ -153,7 +153,7 @@
                     Tестовое Задание: <br>
                     <a href="https://beejee.ru/">BeeJee</a> "PHP": <br>
                     Data: 20.03.2020: <br>
-                    link: <a href="http://35.198.71.142/"> GCloud</a><br>
+                    link: <a href="http://35.206.99.76/"> GCloud</a><br>
                     GitLab: <a href="https://gitlab.com/splaa/test-task">ссылка</a> <br>
                 </div>
                 <div><a href="http://35.206.99.76/">
@@ -169,8 +169,9 @@
             </div>
             <div class="col-sm-4 col-12 p-0">
                 <div>
-                    Описание задание "PHP HTML": <br>
-                    Data: 9.09.0009
+                    Описание: <br>
+                    Задание "PHP HTML": <br>
+                    Data: 9.09.0009 <br>
                     Domain: <a href="http://35.198.71.142/"> Ссылка на domain</a><br>
                     GitHub: <a href="#">ссылка на репозиторий</a> <br>
                 </div>
